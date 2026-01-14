@@ -1,0 +1,114 @@
+/* Dark mode overrides (small, additive) */
+
+/* Smooth transitions */
+body, .bouquet-card, header, footer, .modal-content {
+  transition: background-color .25s ease, color .25s ease, border-color .25s ease;
+}
+
+/* General */
+body.dark-mode {
+  background-color: #0f1720;
+  color: #e6eef6;
+}
+body.dark-mode a { color: #ffb7d9; }
+
+/* Header / nav */
+body.dark-mode header .navbar { background: #0b1014 !important; }
+body.dark-mode .navbar .nav > li > a { color: #cbd5e1 !important; }
+body.dark-mode .navbar-default .navbar-brand { background: #D81265; }
+
+/* Cards and badges */
+body.dark-mode .bouquet-card { background: #111419; border-color: #222; color: #e6eef6; }
+body.dark-mode .badge { background: #ff6b9a; color: #fff; }
+
+/* Modal */
+body.dark-mode .modal-content { background: #0b0f13; color: #e6eef6; }
+
+/* Footer */
+body.dark-mode footer, body.dark-mode #sub-footer { background:#071016; color:#aab6c4; }
+
+/* Misc */
+body.dark-mode .pageTitle { color: #e6eef6; }
+body.dark-mode .price { color: #ffd6e8; }
+
+/* Toggle button */
+#darkModeToggle {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index:100000;
+  width: 42px;
+  height: 42px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  border-radius:6px;
+  background: rgba(0,0,0,0.04);
+  border:1px solid rgba(0,0,0,0.08);
+  color:inherit;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+body.dark-mode #darkModeToggle{ background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.08); box-shadow: 0 4px 16px rgba(0,0,0,0.12); }
+#darkModeToggle:hover { transform: translateY(-2px); }
+#darkModeToggle:focus { outline: none; box-shadow: 0 0 0 4px rgba(231,84,128,0.12); }
+
+/* Make sure icons look good */
+#darkModeToggle .fa{ font-size:16px; line-height:1; }
+
+@media (max-width: 767px) {
+  #darkModeToggle { top: 10px; right: 10px; width:38px; height:38px; }
+}
+
+/* Additional dark-mode UI tuning */
+body.dark-mode .btn { background-color: #1f2933; border-color: #27313a; color: #e6eef6; }
+body.dark-mode .btn-primary { background-color: #D81265; border-color: #D81265; color: #fff; }
+body.dark-mode .panel, body.dark-mode .widget { background: #0f1416; border-color: #222; color: #dbe6ef; }
+body.dark-mode input, body.dark-mode textarea, body.dark-mode select { background: #0b0f13; color: #e6eef6; border-color: #222; }
+
+/* Strong global overrides to avoid invisible text when dark mode is enabled */
+body.dark-mode,
+body.dark-mode header,
+body.dark-mode section,
+body.dark-mode #content,
+body.dark-mode .container,
+body.dark-mode .aligncenter {
+  background-color: #0b0f13 !important;
+  color: #e6eef6 !important;
+}
+
+/* Ensure text and headings are readable */
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6,
+body.dark-mode p, body.dark-mode a, body.dark-mode li, body.dark-mode label, body.dark-mode .widget,
+body.dark-mode .post3 p, body.dark-mode .celeb-card h4, body.dark-mode .celeb-card p,
+body.dark-mode .team-member h4, body.dark-mode .team-member p, body.dark-mode .price-row,
+body.dark-mode .modal-content {
+  color: #e6eef6 !important;
+}
+
+/* Link contrast */
+body.dark-mode a, body.dark-mode a:hover { color: #ffb7d9 !important; text-decoration: underline; }
+
+/* Overlay captions and celebrity captions should remain white */
+body.dark-mode .celeb-card h4, body.dark-mode .celeb-card p { color: #fff !important; }
+
+/* Banner and slider caption adjustments */
+body.dark-mode #banner, body.dark-mode #banner:before, body.dark-mode .flex-caption {
+  background-color: rgba(11,15,19,0.6) !important;
+  color: #fff !important;
+}
+
+/* Navbar links */
+body.dark-mode .navbar .nav > li > a { color: #e6eef6 !important; }
+
+/* Placeholder text */
+body.dark-mode ::placeholder { color: #9fb1c2 !important; opacity: 1; }
+
+/* Ensure dark-mode toggle uses a visible icon */
+body.dark-mode #darkModeToggle .fa { color: #ffd6e8 !important; }
+
+/* Small screens adjustments */
+@media (max-width: 767px) {
+  body.dark-mode, body.dark-mode header, body.dark-mode section { background-color: #091018 !important; }
+}
+
